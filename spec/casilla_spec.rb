@@ -6,7 +6,14 @@ describe Casilla do
         casilla.marcar(1,2)
         expect(casilla.marcado()).to eq(true)
 
-     end 
+    end 
+
+    it "si marco una casilla que no se puede marcar no debe cambiar a true" do
+        casilla = Casilla.new(1,1)
+        casilla.marcar(4,4)
+        expect(casilla.marcado()).to eq(false)
+    end
+
 
   
 
